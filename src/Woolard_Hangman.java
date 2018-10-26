@@ -29,17 +29,17 @@ public class Woolard_Hangman {
         Noob = new String[3];
         Noob[0] = "House";
         Noob[1] = "Ground";
-        Noob[2] = "";
+        Noob[2] = "Furniture";
         //Array for Average Difficulty
         Average = new String[3];
         Average[0] = "Post Malone";
         Average[1] = "White Truck";
-        Average[2] = "";
+        Average[2] = "History Book";
         //Array for Legendary Difficulty
         Legendary = new String[3];
         Legendary[0] = "One Sided Paper";
         Legendary[1] = "The Reagan Administration";
-        Legendary[2] = "";
+        Legendary[2] = "The Iridocyclitis Kid";
 
         System.out.println("Welcome to Hangman! Would you like to play another person or the computer?");
     }
