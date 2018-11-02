@@ -25,6 +25,7 @@ public class Woolard_Hangman {
         String playerWord;
         int usersResponseNumber;
         int Generator;
+        int i = 0;
         String[] Noob;
         String[] Average;
         String[] Legendary;
@@ -56,53 +57,64 @@ public class Woolard_Hangman {
         usersResponse = usersInput.nextLine();
         usersResponseNumber = Integer.parseInt(usersResponse);
 
-        boolean EntireCode = true;
-        while(EntireCode) {
             //Player 1 vs Player 2
+        boolean Loop = true;
+        while (Loop) {
             if(usersResponseNumber == 1) {
                 System.out.println("Ok what's the name of Player 2?");
                 usersResponse = usersInput.nextLine();
                 Player2 = usersResponse;
-                System.out.println("Ok! Player 1 is "+Player1+" and Player 2 is "+Player2+". "+Player1+" please look away" +
-                        " while "+Player2+" picks the word. Please make it at least 5 letters.");
-                usersResponse = usersInput.nextLine().toLowerCase();
-                playerWord = usersResponse;
-                System.out.println("Ok! tell "+Player1+" the game is ready.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-                System.out.println(playerWord);
-
-            }
-            //Player 1 vs Computer
-            else if(usersResponseNumber == 2) {
-                System.out.println("What difficulty do you want to play?\n1 Noob\n2 Average\n3 Legendary");
-                usersResponse = usersInput.nextLine();
-                usersResponseNumber = Integer.parseInt(usersResponse);
-                boolean ResponseAI = true;
-                while(ResponseAI) {
-                    if(usersResponseNumber == 1) {
-                        System.out.println("Ok you'll be playing the easiest difficulty you noob.");
-                        playerWord = Noob[Generator];
-                        System.exit(0);
-                    } else if(usersResponseNumber == 2) {
-                        System.out.println("Ok you'll be playing the Average difficulty.");
-                        playerWord = Average[Generator];
-                        System.exit(0);
-                    } else if(usersResponseNumber == 3) {
-                        System.out.println("Ok you'll be playing the hardest difficulty you legend.");
-                        playerWord = Legendary[Generator];
-                        System.exit(0);
-                    } else {
-                        System.out.println("Invalid Response please select one of the three options.");
-                        usersResponse = usersInput.nextLine();
-                        usersResponseNumber = Integer.parseInt(usersResponse);
+                System.out.println("Ok! Player 1 is " + Player1 + " and Player 2 is " + Player2 + ".");
+                boolean playerVSPlayer = true;
+                while (playerVSPlayer) {
+                    System.out.println("Ok "+Player2+", pick a word with at least 5 letters and "+Player1+" you need to" +
+                            " look away until they have submitted the word.");
+                    usersResponse = usersInput.nextLine().toLowerCase();
+                    playerWord = usersResponse;
+                    System.out.println("Ok! tell " + Player1 + " the game is ready.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+                    System.out.println(playerWord);
+                    playerWord = playerWord.substring(0,i)+playerWord.substring(i+2);
+                    System.out.println(playerWord);
+                    System.exit(0);
+                    if(playerWord.substring(0,0) == usersResponse){
+                        playerWord.substring(0,i) = "-";
                     }
+
+
                 }
             }
-            //Invalid Response
-            else {
-                System.out.println("Invalid Response please select one of the two options.");
-                usersResponse = usersInput.nextLine();
-                usersResponseNumber = Integer.parseInt(usersResponse);
+            //Player 1 vs Computer
+                if (usersResponseNumber == 2) {
+                    boolean playerVSComputer = true;
+                    while (playerVSComputer) {
+                        System.out.println("What difficulty do you want to play?\n1 Noob\n2 Average\n3 Legendary");
+                        usersResponse = usersInput.nextLine();
+                        usersResponseNumber = Integer.parseInt(usersResponse);
+                        if (usersResponseNumber == 1) {
+                            System.out.println("Ok you'll be playing the easiest difficulty you noob.");
+                            playerWord = Noob[Generator];
+                            System.exit(0);
+                        } else if (usersResponseNumber == 2) {
+                            System.out.println("Ok you'll be playing the Average difficulty.");
+                            playerWord = Average[Generator];
+                            System.exit(0);
+                        } else if (usersResponseNumber == 3) {
+                            System.out.println("Ok you'll be playing the hardest difficulty you legend.");
+                            playerWord = Legendary[Generator];
+                            System.exit(0);
+                        } else {
+                            System.out.println("Invalid Response please select one of the three options.");
+                            usersResponse = usersInput.nextLine();
+                            usersResponseNumber = Integer.parseInt(usersResponse);
+                        }
+                    }
+                }
+                //Invalid Response
+                else {
+                    System.out.println("Invalid Response please select one of the two options.");
+                    usersResponse = usersInput.nextLine();
+                    usersResponseNumber = Integer.parseInt(usersResponse);
+                }
             }
-        }
     }
 }
