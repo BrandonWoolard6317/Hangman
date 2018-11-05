@@ -20,12 +20,17 @@ public class Woolard_Hangman {
         //Variables
         Scanner usersInput = new Scanner(System.in);
         String usersResponse;
-        String Player1;
-        String Player2;
+        String Player1 = "Name";
+        String Player2 = "Name";
         String playerWord;
+        String guessWord;
         int usersResponseNumber;
         int Generator;
         int i = 0;
+        int g = 0;
+        int p1w = 0;
+        int p2w = 0;
+        int cw;
         String[] Noob;
         String[] Average;
         String[] Legendary;
@@ -53,34 +58,62 @@ public class Woolard_Hangman {
         usersResponse = usersInput.nextLine();
         Player1 = usersResponse;
 
-        System.out.println("Ok " + Player1 + ", would you like to play another person or the computer?\n1 Person\n2 Computer");
+        System.out.println("Ok "+Player1+", would you like to play another person or the computer?\n1 Person\n2 Computer");
         usersResponse = usersInput.nextLine();
         usersResponseNumber = Integer.parseInt(usersResponse);
 
             //Player 1 vs Player 2
         boolean Loop = true;
         while (Loop) {
-            if(usersResponseNumber == 1) {
-                System.out.println("Ok what's the name of Player 2?");
+            g++;
+            if(g > 0){
+                System.out.println("What do you want to play?/n1 Person/n2 Computer");
                 usersResponse = usersInput.nextLine();
-                Player2 = usersResponse;
-                System.out.println("Ok! Player 1 is " + Player1 + " and Player 2 is " + Player2 + ".");
+                usersResponseNumber = Integer.parseInt(usersResponse);
+                if(usersResponseNumber == 1){
+                    System.out.println("Are you playing the same person?\n1 Yes\n2 No");
+                    usersResponse = usersInput.nextLine();
+                    usersResponseNumber = Integer.parseInt(usersResponse);
+                    if(usersResponseNumber == 1){
+                        System.out.println("Ok, you are on game "+g+" with "+Player2+".\n"+Player1+"'s Wins: "+p1w+"\n"+
+                                Player2+"'s Wins: "+p2w);
+                    }
+                    else if(usersResponseNumber == 2){
+                        g = 1;
+                        System.out.println("Ok what's the name of Player 2?");
+                        usersResponse = usersInput.nextLine();
+                        Player2 = usersResponse;
+                        System.out.println(Player1+" will be playing "+Player2+".");
+                    }
+                    else{
+                        System.out.println("Invalid Response please select one of the two options.");
+                    }
+                }
+                else if(usersResponseNumber == 2){
+                    
+                }
+                else {
+                    System.out.println("Invalid Response please select one of the two options.");
+                }
+            }
+            if(usersResponseNumber == 1) {
+                if(g == 0) {
+                    System.out.println("Ok what's the name of Player 2?");
+                    usersResponse = usersInput.nextLine();
+                    Player2 = usersResponse;
+                    System.out.println("Ok! Player 1 is " + Player1 + " and Player 2 is " + Player2 + ".");
+                }
+                System.out.println("Ok "+Player2+", pick a word with at least 5 letters and "+Player1+" you need to" +
+                        " look away until they have submitted the word.");
+                usersResponse = usersInput.nextLine().toLowerCase();
+                playerWord = usersResponse;
+                System.out.println("Ok! tell " + Player1 + " the game is ready.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+                System.out.println(playerWord);
+                System.out.println("Ok "+Player1+", you can go ahead and guess the word.");
                 boolean playerVSPlayer = true;
                 while (playerVSPlayer) {
-                    System.out.println("Ok "+Player2+", pick a word with at least 5 letters and "+Player1+" you need to" +
-                            " look away until they have submitted the word.");
                     usersResponse = usersInput.nextLine().toLowerCase();
-                    playerWord = usersResponse;
-                    System.out.println("Ok! tell " + Player1 + " the game is ready.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-                    System.out.println(playerWord);
-                    playerWord = playerWord.substring(0,i)+playerWord.substring(i+2);
-                    System.out.println(playerWord);
-                    System.exit(0);
-                    if(playerWord.substring(0,0) == usersResponse){
-                        playerWord.substring(0,i) = "-";
-                    }
-
-
+                    guessWord = usersResponse;
                 }
             }
             //Player 1 vs Computer
