@@ -2,6 +2,285 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class Woolard_Hangman {
+    public static void showHangman(){
+        int attempt = 0;
+        if(attempt == 1){
+            System.out.println(" ______________________________");
+            System.out.println("|               |              |");
+            System.out.println("|               |              |");
+            System.out.println("|                              |");
+            System.out.println("|                              |");
+            System.out.println("|                              |");
+            System.out.println("|                              |");
+            System.out.println("|                              |");
+            System.out.println("|                              |");
+            System.out.println(" ______________________________");
+            System.out.println("|                              |");
+            System.out.println("|     Attempts Left: 15        |");
+            System.out.println(" ______________________________");
+        }
+        else if(attempt == 2){
+            System.out.println(" ______________________________");
+            System.out.println("|               |              |");
+            System.out.println("|               |              |");
+            System.out.println("|               O              |");
+            System.out.println("|                              |");
+            System.out.println("|                              |");
+            System.out.println("|                              |");
+            System.out.println("|                              |");
+            System.out.println("|                              |");
+            System.out.println(" ______________________________");
+            System.out.println("|                              |");
+            System.out.println("|     Attempts Left: "+(16-attempt)+"        |");
+            System.out.println(" ______________________________");
+        }
+        else if(attempt == 3){
+            System.out.println(" ______________________________");
+            System.out.println("|               |              |");
+            System.out.println("|               |              |");
+            System.out.println("|               O              |");
+            System.out.println("|               |              |");
+            System.out.println("|                              |");
+            System.out.println("|                              |");
+            System.out.println("|                              |");
+            System.out.println("|                              |");
+            System.out.println(" ______________________________");
+            System.out.println("|                              |");
+            System.out.println("|     Attempts Left: "+(16-attempt)+"        |");
+            System.out.println(" ______________________________");
+        }
+        else if(attempt == 4){
+            System.out.println(" ______________________________");
+            System.out.println("|               |              |");
+            System.out.println("|               |              |");
+            System.out.println("|               O              |");
+            System.out.println("|              /|              |");
+            System.out.println("|                              |");
+            System.out.println("|                              |");
+            System.out.println("|                              |");
+            System.out.println("|                              |");
+            System.out.println(" ______________________________");
+            System.out.println("|                              |");
+            System.out.println("|     Attempts Left: "+(16-attempt)+"        |");
+            System.out.println(" ______________________________");
+        }
+        else if(attempt == 5){
+            System.out.println(" ______________________________");
+            System.out.println("|               |              |");
+            System.out.println("|               |              |");
+            System.out.println("|               O              |");
+            System.out.println("|              /|\\             |");
+            System.out.println("|                              |");
+            System.out.println("|                              |");
+            System.out.println("|                              |");
+            System.out.println("|                              |");
+            System.out.println(" ______________________________");
+            System.out.println("|                              |");
+            System.out.println("|     Attempts Left: "+(16-attempt)+"        |");
+            System.out.println(" ______________________________");
+        }
+        else if(attempt == 6){
+            System.out.println(" ______________________________");
+            System.out.println("|               |              |");
+            System.out.println("|               |              |");
+            System.out.println("|               O              |");
+            System.out.println("|              /|\\             |");
+            System.out.println("|               |              |");
+            System.out.println("|                              |");
+            System.out.println("|                              |");
+            System.out.println("|                              |");
+            System.out.println(" ______________________________");
+            System.out.println("|                              |");
+            System.out.println("|     Attempts Left: "+(16-attempt)+"        |");
+            System.out.println(" ______________________________");
+        }
+        else if(attempt == 7){
+            System.out.println(" ______________________________");
+            System.out.println("|               |              |");
+            System.out.println("|               |              |");
+            System.out.println("|               O              |");
+            System.out.println("|              /|\\             |");
+            System.out.println("|             / |              |");
+            System.out.println("|                              |");
+            System.out.println("|                              |");
+            System.out.println("|                              |");
+            System.out.println(" ______________________________");
+            System.out.println("|                              |");
+            System.out.println("|     Attempts Left: "+(16-attempt)+"       |");
+            System.out.println(" ______________________________");
+        }
+        else if(attempt == 8){
+            System.out.println(" ______________________________");
+            System.out.println("|               |              |");
+            System.out.println("|               |              |");
+            System.out.println("|               O              |");
+            System.out.println("|              /|\\             |");
+            System.out.println("|             / | \\            |");
+            System.out.println("|                              |");
+            System.out.println("|                              |");
+            System.out.println("|                              |");
+            System.out.println(" ______________________________");
+            System.out.println("|                              |");
+            System.out.println("|     Attempts Left: "+(16-attempt)+"       |");
+            System.out.println(" ______________________________");
+        }
+        else if(attempt == 9){
+            System.out.println(" ______________________________");
+            System.out.println("|               |              |");
+            System.out.println("|               |              |");
+            System.out.println("|               O              |");
+            System.out.println("|              /|\\             |");
+            System.out.println("|             / | \\            |");
+            System.out.println("|              /               |");
+            System.out.println("|                              |");
+            System.out.println("|                              |");
+            System.out.println(" ______________________________");
+            System.out.println("|                              |");
+            System.out.println("|     Attempts Left: "+(16-attempt)+"       |");
+            System.out.println(" ______________________________");
+        }
+        else if(attempt == 10){
+            System.out.println(" ______________________________");
+            System.out.println("|               |              |");
+            System.out.println("|               |              |");
+            System.out.println("|               O              |");
+            System.out.println("|              /|\\             |");
+            System.out.println("|             / | \\            |");
+            System.out.println("|              / \\               |");
+            System.out.println("|                              |");
+            System.out.println("|                              |");
+            System.out.println(" ______________________________");
+            System.out.println("|                              |");
+            System.out.println("|     Attempts Left: "+(16-attempt)+"       |");
+            System.out.println(" ______________________________");
+        }
+        else if(attempt == 11){
+            System.out.println(" ______________________________");
+            System.out.println("|               |              |");
+            System.out.println("|               |              |");
+            System.out.println("|               O              |");
+            System.out.println("|              /|\\             |");
+            System.out.println("|             / | \\            |");
+            System.out.println("|              / \\               |");
+            System.out.println("|             /                |");
+            System.out.println("|                              |");
+            System.out.println(" ______________________________");
+            System.out.println("|                              |");
+            System.out.println("|     Attempts Left: "+(16-attempt)+"       |");
+            System.out.println(" ______________________________");
+        }
+        else if(attempt == 12){
+            System.out.println(" ______________________________");
+            System.out.println("|               |              |");
+            System.out.println("|               |              |");
+            System.out.println("|               O              |");
+            System.out.println("|              /|\\             |");
+            System.out.println("|             / | \\            |");
+            System.out.println("|              / \\             |");
+            System.out.println("|             /   \\            |");
+            System.out.println("|                              |");
+            System.out.println(" ______________________________");
+            System.out.println("|                              |");
+            System.out.println("|     Attempts Left: "+(16-attempt)+"       |");
+            System.out.println(" ______________________________");
+        }
+        else if(attempt == 13){
+            System.out.println(" ______________________________");
+            System.out.println("|               |              |");
+            System.out.println("|               |              |");
+            System.out.println("|               O              |");
+            System.out.println("|              /|\\             |");
+            System.out.println("|            _/ | \\            |");
+            System.out.println("|              / \\             |");
+            System.out.println("|             /   \\            |");
+            System.out.println("|                              |");
+            System.out.println(" ______________________________");
+            System.out.println("|                              |");
+            System.out.println("|     Attempts Left: "+(16-attempt)+"       |");
+            System.out.println(" ______________________________");
+        }
+        else if(attempt == 14){
+            System.out.println(" ______________________________");
+            System.out.println("|               |              |");
+            System.out.println("|               |              |");
+            System.out.println("|               O              |");
+            System.out.println("|              /|\\             |");
+            System.out.println("|            _/ | \\_           |");
+            System.out.println("|              / \\             |");
+            System.out.println("|             /   \\            |");
+            System.out.println("|                              |");
+            System.out.println(" ______________________________");
+            System.out.println("|                              |");
+            System.out.println("|     Attempts Left: "+(16-attempt)+"       |");
+            System.out.println(" ______________________________");
+        }
+        else if(attempt == 15){
+            System.out.println(" ______________________________");
+            System.out.println("|               |              |");
+            System.out.println("|               |              |");
+            System.out.println("|               O              |");
+            System.out.println("|              /|\\             |");
+            System.out.println("|            _/ | \\_           |");
+            System.out.println("|              / \\             |");
+            System.out.println("|           __/   \\            |");
+            System.out.println("|                              |");
+            System.out.println(" ______________________________");
+            System.out.println("|                              |");
+            System.out.println("|     Attempts Left: "+(16-attempt)+"       |");
+            System.out.println(" ______________________________");
+        }
+        else if(attempt == 16){
+            System.out.println(" ______________________________");
+            System.out.println("|               |              |");
+            System.out.println("|               |              |");
+            System.out.println("|               O              |");
+            System.out.println("|              /|\\             |");
+            System.out.println("|            _/ | \\_           |");
+            System.out.println("|              / \\             |");
+            System.out.println("|           __/   \\__          |");
+            System.out.println("|                              |");
+            System.out.println(" ______________________________");
+            System.out.println("|                              |");
+            System.out.println("|     Attempts Left: "+(16-attempt)+"       |");
+            System.out.println(" ______________________________");
+        }
+    }
+    public static void drawLines(String playerWord) {
+        for(int i = 0; i < playerWord.length(); i++) {
+            String Display = "";
+            Display += "-";
+        }
+    }
+
+
+    public static boolean checkLetters(String guessing,String playerWord){
+        return playerWord.contains(guessing);
+
+        }
+        /*int attempt = 0;
+        String playerWord = "";
+        String guessWord = "";
+        int k = 0;
+        int p = 1;
+        if(playerWord.equals(guessWord)){
+            System.out.println("Congrats! You won!");
+            attempt = 85;
+        }
+        else if(playerWord.substring(k,p).equals(guessWord)){
+
+        }
+        else if(playerWord.substring(k++,p++).equals(guessWord)){
+
+        }
+        else if(playerWord.substring(k+2,p+2).equals(guessWord)){
+
+        }
+        else if(playerWord.substring(k+3,p+3).equals(guessWord)){
+
+        }*/
+
+
+
     public static void main(String[] args) {
         /*System.out.println(" ______________________________");
         System.out.println("|               |              |");
@@ -34,6 +313,8 @@ public class Woolard_Hangman {
         int p1w = 0;
         int p2w = 0;
         int cw;
+        int attempt = 0;
+        int a = 0;
         String[] Noob;
         String[] Average;
         String[] Legendary;
@@ -112,12 +393,23 @@ public class Woolard_Hangman {
                 playerWord = usersResponse;
                 System.out.println("Ok! tell " + Player1 + " the game is ready.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
                 System.out.println(playerWord);
-                String guessPhrase = drawLines(secretWord);
-                System.out.println(secretWord);
-                System.out.println(guessPhrase);
                 System.out.println("Ok " + Player1 + ", you can go ahead and guess the word.");
-                usersResponse = usersInput.nextLine().toLowerCase();
-                guessWord = usersResponse;
+                boolean playerVsPlayer=true;
+                while(playerVsPlayer) {
+                    attempt = a;
+                    attempt++;
+                    a = attempt;
+                    if(attempt > 1){
+                        System.out.println("Guess again.");
+                    }
+                    showHangman();
+                    usersResponse = usersInput.nextLine().toLowerCase();
+                    if(checkLetters(usersResponse,playerWord)){
+                        System.out.println("Testing method to return boolean for plugging in the correct guess");
+                    }
+
+
+                }
             }
             //Player 1 vs Computer
             if (usersResponseNumber == 2) {
@@ -156,14 +448,5 @@ public class Woolard_Hangman {
                 usersResponseNumber = Integer.parseInt(usersResponse);
             }
         }
-    }
-
-    public static String drawLines(String playerWord) {
-        for(int i = 0; i < playerWord.length(); i++) {
-            String Display = "";
-            Display += "-";
-        }
-
-        return drawLines(new String(playerWord));
     }
 }
