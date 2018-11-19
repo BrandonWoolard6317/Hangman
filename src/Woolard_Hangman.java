@@ -245,11 +245,12 @@ public class Woolard_Hangman {
             System.out.println(" ______________________________");
         }
     }
-    public static void drawLines(String playerWord) {
+    public static String drawLines(String playerWord) {
+        String Display = "";
         for(int i = 0; i < playerWord.length(); i++) {
-            String Display = "";
             Display += "-";
         }
+        return Display;
     }
 
 
@@ -257,45 +258,8 @@ public class Woolard_Hangman {
         return playerWord.contains(guessing);
 
         }
-        /*int attempt = 0;
-        String playerWord = "";
-        String guessWord = "";
-        int k = 0;
-        int p = 1;
-        if(playerWord.equals(guessWord)){
-            System.out.println("Congrats! You won!");
-            attempt = 85;
-        }
-        else if(playerWord.substring(k,p).equals(guessWord)){
-
-        }
-        else if(playerWord.substring(k++,p++).equals(guessWord)){
-
-        }
-        else if(playerWord.substring(k+2,p+2).equals(guessWord)){
-
-        }
-        else if(playerWord.substring(k+3,p+3).equals(guessWord)){
-
-        }*/
-
-
 
     public static void main(String[] args) {
-        /*System.out.println(" ______________________________");
-        System.out.println("|               |              |");
-        System.out.println("|               |              |");
-        System.out.println("|               O              |");
-        System.out.println("|              /|\\             |");
-        System.out.println("|            _/ | \\_           |");
-        System.out.println("|              / \\             |");
-        System.out.println("|           __/   \\__          |");
-        System.out.println("|                              |");
-        System.out.println(" ______________________________");
-        System.out.println("|                              |");
-        System.out.println("|     Attempts Left: 0         |");
-        System.out.println(" ______________________________");*/
-
         //Variables
         Scanner usersInput = new Scanner(System.in);
         String usersResponse;
@@ -392,7 +356,7 @@ public class Woolard_Hangman {
                 usersResponse = usersInput.nextLine().toLowerCase();
                 playerWord = usersResponse;
                 System.out.println("Ok! tell " + Player1 + " the game is ready.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-                System.out.println(playerWord);
+                System.out.println(drawLines(playerWord));
                 System.out.println("Ok " + Player1 + ", you can go ahead and guess the word.");
                 boolean playerVsPlayer=true;
                 while(playerVsPlayer) {
@@ -402,13 +366,10 @@ public class Woolard_Hangman {
                     if(attempt > 1){
                         System.out.println("Guess again.");
                     }
-                    showHangman();
                     usersResponse = usersInput.nextLine().toLowerCase();
                     if(checkLetters(usersResponse,playerWord)){
                         System.out.println("Testing method to return boolean for plugging in the correct guess");
                     }
-
-
                 }
             }
             //Player 1 vs Computer
@@ -416,6 +377,7 @@ public class Woolard_Hangman {
                 System.out.println("What difficulty do you want to play?\n1 Noob\n2 Average\n3 Legendary");
                 usersResponse = usersInput.nextLine();
                 usersResponseNumber = Integer.parseInt(usersResponse);
+                playerWord = "";
                 if (usersResponseNumber == 1) {
                     System.out.println("Ok you'll be playing the easiest difficulty you noob.");
                     playerWord = Noob[Generator];
@@ -438,8 +400,8 @@ public class Woolard_Hangman {
                 }
                 System.out.println("Ok " + Player1 + ", since you're playing " + Difficulty + ", there will be a total of " + l +
                         " to guess.");
+                System.out.println(drawLines(playerWord));
                 usersResponse = usersInput.nextLine().toLowerCase();
-                guessWord = usersResponse;
             }
             //Invalid Response
             else {
