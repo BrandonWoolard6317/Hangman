@@ -13,7 +13,7 @@ public class Woolard_Hangman {
             System.out.println("|                              |");
             System.out.println("|                              |");
             System.out.println("|                              |");
-            System.out.println("|                              |");
+            System.out.println("|       Word: "+drawLines(playerWord)+"              |");
             System.out.println(" ______________________________");
             System.out.println("|                              |");
             System.out.println("|     Attempts Left: 15        |");
