@@ -17,10 +17,12 @@
       <file leaf-file-name="Woolard_Hangman.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Woolard_Hangman.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="261" column="44" selection-start-line="261" selection-start-column="44" selection-end-line="261" selection-end-column="44" />
+            <state relative-caret-position="69">
+              <caret line="247" column="48" selection-start-line="247" selection-start-column="48" selection-end-line="247" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#15779#15780#0" expanded="true" />
+                <element signature="e#15835#15836#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -178,7 +180,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28971255" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29425114" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -204,10 +206,24 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Woolard_Hangman.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4437">
+          <caret line="261" column="44" selection-start-line="261" selection-start-column="44" selection-end-line="261" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#15779#15780#0" expanded="true" />
+            <element signature="e#15835#15836#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Woolard_Hangman.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6919">
           <caret line="407" column="110" lean-forward="true" selection-start-line="407" selection-start-column="110" selection-end-line="407" selection-end-column="110" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#15779#15780#0" expanded="true" />
+            <element signature="e#15835#15836#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -218,6 +234,8 @@
           <caret line="113" column="47" selection-start-line="113" selection-start-column="47" selection-end-line="113" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#15779#15780#0" expanded="true" />
+            <element signature="e#15835#15836#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -228,6 +246,8 @@
           <caret line="166" column="29" selection-start-line="166" selection-start-column="29" selection-end-line="166" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#15779#15780#0" expanded="true" />
+            <element signature="e#15835#15836#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -238,6 +258,8 @@
           <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#15779#15780#0" expanded="true" />
+            <element signature="e#15835#15836#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -248,6 +270,8 @@
           <caret line="79" column="56" lean-forward="true" selection-start-line="79" selection-start-column="56" selection-end-line="79" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#15779#15780#0" expanded="true" />
+            <element signature="e#15835#15836#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -258,6 +282,8 @@
           <caret line="87" column="39" lean-forward="true" selection-start-line="87" selection-start-column="39" selection-end-line="87" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#15779#15780#0" expanded="true" />
+            <element signature="e#15835#15836#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -268,6 +294,8 @@
           <caret line="64" column="70" lean-forward="true" selection-start-line="64" selection-start-column="70" selection-end-line="64" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#15779#15780#0" expanded="true" />
+            <element signature="e#15835#15836#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -278,6 +306,8 @@
           <caret line="45" column="31" lean-forward="true" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#15779#15780#0" expanded="true" />
+            <element signature="e#15835#15836#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -288,6 +318,8 @@
           <caret line="47" selection-start-line="47" selection-end-line="47" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#15779#15780#0" expanded="true" />
+            <element signature="e#15835#15836#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -298,6 +330,8 @@
           <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#15779#15780#0" expanded="true" />
+            <element signature="e#15835#15836#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -311,10 +345,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Woolard_Hangman.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="261" column="44" selection-start-line="261" selection-start-column="44" selection-end-line="261" selection-end-column="44" />
+        <state relative-caret-position="69">
+          <caret line="247" column="48" selection-start-line="247" selection-start-column="48" selection-end-line="247" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#15779#15780#0" expanded="true" />
+            <element signature="e#15835#15836#0" expanded="true" />
           </folding>
         </state>
       </provider>

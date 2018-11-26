@@ -2,9 +2,10 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class Woolard_Hangman {
-    public static void showHangman(){
-        int attempt = 0;
-        if(attempt == 1){
+    public static String showHangman(String playerWord, int a,int q){
+        String hangman = "";
+        q++;
+        if(a == 1){
             System.out.println(" ______________________________");
             System.out.println("|               |              |");
             System.out.println("|               |              |");
@@ -19,7 +20,7 @@ public class Woolard_Hangman {
             System.out.println("|     Attempts Left: 15        |");
             System.out.println(" ______________________________");
         }
-        else if(attempt == 2){
+        else if(a == 2){
             System.out.println(" ______________________________");
             System.out.println("|               |              |");
             System.out.println("|               |              |");
@@ -28,13 +29,13 @@ public class Woolard_Hangman {
             System.out.println("|                              |");
             System.out.println("|                              |");
             System.out.println("|                              |");
-            System.out.println("|                              |");
+            System.out.println("|       Word: "+drawLines(playerWord)+"              |");
             System.out.println(" ______________________________");
             System.out.println("|                              |");
-            System.out.println("|     Attempts Left: "+(16-attempt)+"        |");
+            System.out.println("|     Attempts Left: "+(16-a)+"        |");
             System.out.println(" ______________________________");
         }
-        else if(attempt == 3){
+        else if(a == 3){
             System.out.println(" ______________________________");
             System.out.println("|               |              |");
             System.out.println("|               |              |");
@@ -43,13 +44,13 @@ public class Woolard_Hangman {
             System.out.println("|                              |");
             System.out.println("|                              |");
             System.out.println("|                              |");
-            System.out.println("|                              |");
+            System.out.println("|       Word: "+drawLines(playerWord)+"              |");
             System.out.println(" ______________________________");
             System.out.println("|                              |");
-            System.out.println("|     Attempts Left: "+(16-attempt)+"        |");
+            System.out.println("|     Attempts Left: "+(16-a)+"        |");
             System.out.println(" ______________________________");
         }
-        else if(attempt == 4){
+        else if(a == 4){
             System.out.println(" ______________________________");
             System.out.println("|               |              |");
             System.out.println("|               |              |");
@@ -58,13 +59,13 @@ public class Woolard_Hangman {
             System.out.println("|                              |");
             System.out.println("|                              |");
             System.out.println("|                              |");
-            System.out.println("|                              |");
+            System.out.println("|       Word: "+drawLines(playerWord)+"              |");
             System.out.println(" ______________________________");
             System.out.println("|                              |");
-            System.out.println("|     Attempts Left: "+(16-attempt)+"        |");
+            System.out.println("|     Attempts Left: "+(16-a)+"        |");
             System.out.println(" ______________________________");
         }
-        else if(attempt == 5){
+        else if(a == 5){
             System.out.println(" ______________________________");
             System.out.println("|               |              |");
             System.out.println("|               |              |");
@@ -73,13 +74,13 @@ public class Woolard_Hangman {
             System.out.println("|                              |");
             System.out.println("|                              |");
             System.out.println("|                              |");
-            System.out.println("|                              |");
+            System.out.println("|       Word: "+drawLines(playerWord)+"              |");
             System.out.println(" ______________________________");
             System.out.println("|                              |");
-            System.out.println("|     Attempts Left: "+(16-attempt)+"        |");
+            System.out.println("|     Attempts Left: "+(16-a)+"        |");
             System.out.println(" ______________________________");
         }
-        else if(attempt == 6){
+        else if(a == 6){
             System.out.println(" ______________________________");
             System.out.println("|               |              |");
             System.out.println("|               |              |");
@@ -88,13 +89,13 @@ public class Woolard_Hangman {
             System.out.println("|               |              |");
             System.out.println("|                              |");
             System.out.println("|                              |");
-            System.out.println("|                              |");
+            System.out.println("|       Word: "+drawLines(playerWord)+"              |");
             System.out.println(" ______________________________");
             System.out.println("|                              |");
-            System.out.println("|     Attempts Left: "+(16-attempt)+"        |");
+            System.out.println("|     Attempts Left: "+(16-a)+"        |");
             System.out.println(" ______________________________");
         }
-        else if(attempt == 7){
+        else if(a == 7){
             System.out.println(" ______________________________");
             System.out.println("|               |              |");
             System.out.println("|               |              |");
@@ -103,13 +104,13 @@ public class Woolard_Hangman {
             System.out.println("|             / |              |");
             System.out.println("|                              |");
             System.out.println("|                              |");
-            System.out.println("|                              |");
+            System.out.println("|       Word: "+drawLines(playerWord)+"              |");
             System.out.println(" ______________________________");
             System.out.println("|                              |");
-            System.out.println("|     Attempts Left: "+(16-attempt)+"       |");
+            System.out.println("|     Attempts Left: "+(16-a)+"       |");
             System.out.println(" ______________________________");
         }
-        else if(attempt == 8){
+        else if(a == 8){
             System.out.println(" ______________________________");
             System.out.println("|               |              |");
             System.out.println("|               |              |");
@@ -118,13 +119,13 @@ public class Woolard_Hangman {
             System.out.println("|             / | \\            |");
             System.out.println("|                              |");
             System.out.println("|                              |");
-            System.out.println("|                              |");
+            System.out.println("|       Word: "+drawLines(playerWord)+"              |");
             System.out.println(" ______________________________");
             System.out.println("|                              |");
-            System.out.println("|     Attempts Left: "+(16-attempt)+"       |");
+            System.out.println("|     Attempts Left: "+(16-a)+"       |");
             System.out.println(" ______________________________");
         }
-        else if(attempt == 9){
+        else if(a == 9){
             System.out.println(" ______________________________");
             System.out.println("|               |              |");
             System.out.println("|               |              |");
@@ -133,13 +134,13 @@ public class Woolard_Hangman {
             System.out.println("|             / | \\            |");
             System.out.println("|              /               |");
             System.out.println("|                              |");
-            System.out.println("|                              |");
+            System.out.println("|       Word: "+drawLines(playerWord)+"              |");
             System.out.println(" ______________________________");
             System.out.println("|                              |");
-            System.out.println("|     Attempts Left: "+(16-attempt)+"       |");
+            System.out.println("|     Attempts Left: "+(16-a)+"       |");
             System.out.println(" ______________________________");
         }
-        else if(attempt == 10){
+        else if(a == 10){
             System.out.println(" ______________________________");
             System.out.println("|               |              |");
             System.out.println("|               |              |");
@@ -148,13 +149,13 @@ public class Woolard_Hangman {
             System.out.println("|             / | \\            |");
             System.out.println("|              / \\               |");
             System.out.println("|                              |");
-            System.out.println("|                              |");
+            System.out.println("|       Word: "+drawLines(playerWord)+"              |");
             System.out.println(" ______________________________");
             System.out.println("|                              |");
-            System.out.println("|     Attempts Left: "+(16-attempt)+"       |");
+            System.out.println("|     Attempts Left: "+(16-a)+"       |");
             System.out.println(" ______________________________");
         }
-        else if(attempt == 11){
+        else if(a == 11){
             System.out.println(" ______________________________");
             System.out.println("|               |              |");
             System.out.println("|               |              |");
@@ -163,13 +164,13 @@ public class Woolard_Hangman {
             System.out.println("|             / | \\            |");
             System.out.println("|              / \\               |");
             System.out.println("|             /                |");
-            System.out.println("|                              |");
+            System.out.println("|       Word: "+drawLines(playerWord)+"              |");
             System.out.println(" ______________________________");
             System.out.println("|                              |");
-            System.out.println("|     Attempts Left: "+(16-attempt)+"       |");
+            System.out.println("|     Attempts Left: "+(16-a)+"       |");
             System.out.println(" ______________________________");
         }
-        else if(attempt == 12){
+        else if(a == 12){
             System.out.println(" ______________________________");
             System.out.println("|               |              |");
             System.out.println("|               |              |");
@@ -178,13 +179,13 @@ public class Woolard_Hangman {
             System.out.println("|             / | \\            |");
             System.out.println("|              / \\             |");
             System.out.println("|             /   \\            |");
-            System.out.println("|                              |");
+            System.out.println("|       Word: "+drawLines(playerWord)+"              |");
             System.out.println(" ______________________________");
             System.out.println("|                              |");
-            System.out.println("|     Attempts Left: "+(16-attempt)+"       |");
+            System.out.println("|     Attempts Left: "+(16-a)+"       |");
             System.out.println(" ______________________________");
         }
-        else if(attempt == 13){
+        else if(a == 13){
             System.out.println(" ______________________________");
             System.out.println("|               |              |");
             System.out.println("|               |              |");
@@ -193,13 +194,13 @@ public class Woolard_Hangman {
             System.out.println("|            _/ | \\            |");
             System.out.println("|              / \\             |");
             System.out.println("|             /   \\            |");
-            System.out.println("|                              |");
+            System.out.println("|       Word: "+drawLines(playerWord)+"              |");
             System.out.println(" ______________________________");
             System.out.println("|                              |");
-            System.out.println("|     Attempts Left: "+(16-attempt)+"       |");
+            System.out.println("|     Attempts Left: "+(16-a)+"       |");
             System.out.println(" ______________________________");
         }
-        else if(attempt == 14){
+        else if(a == 14){
             System.out.println(" ______________________________");
             System.out.println("|               |              |");
             System.out.println("|               |              |");
@@ -208,13 +209,13 @@ public class Woolard_Hangman {
             System.out.println("|            _/ | \\_           |");
             System.out.println("|              / \\             |");
             System.out.println("|             /   \\            |");
-            System.out.println("|                              |");
+            System.out.println("|       Word: "+drawLines(playerWord)+"              |");
             System.out.println(" ______________________________");
             System.out.println("|                              |");
-            System.out.println("|     Attempts Left: "+(16-attempt)+"       |");
+            System.out.println("|     Attempts Left: "+(16-a)+"       |");
             System.out.println(" ______________________________");
         }
-        else if(attempt == 15){
+        else if(a == 15){
             System.out.println(" ______________________________");
             System.out.println("|               |              |");
             System.out.println("|               |              |");
@@ -223,13 +224,13 @@ public class Woolard_Hangman {
             System.out.println("|            _/ | \\_           |");
             System.out.println("|              / \\             |");
             System.out.println("|           __/   \\            |");
-            System.out.println("|                              |");
+            System.out.println("|       Word: "+drawLines(playerWord)+"              |");
             System.out.println(" ______________________________");
             System.out.println("|                              |");
-            System.out.println("|     Attempts Left: "+(16-attempt)+"       |");
+            System.out.println("|     Attempts Left: "+(16-a)+"       |");
             System.out.println(" ______________________________");
         }
-        else if(attempt == 16){
+        else if(a == 16){
             System.out.println(" ______________________________");
             System.out.println("|               |              |");
             System.out.println("|               |              |");
@@ -238,17 +239,21 @@ public class Woolard_Hangman {
             System.out.println("|            _/ | \\_           |");
             System.out.println("|              / \\             |");
             System.out.println("|           __/   \\__          |");
-            System.out.println("|                              |");
+            System.out.println("|       Word: "+drawLines(playerWord)+"              |");
             System.out.println(" ______________________________");
             System.out.println("|                              |");
-            System.out.println("|     Attempts Left: "+(16-attempt)+"       |");
+            System.out.println("|     Attempts Left: "+(16-a)+"       |");
             System.out.println(" ______________________________");
         }
+            return showHangman(playerWord, a,q);
     }
     public static String drawLines(String playerWord) {
         String Display = "";
         for(int i = 0; i < playerWord.length(); i++) {
             Display += "-";
+            if(playerWord.contains(" ")){
+
+            }
         }
         return Display;
     }
@@ -256,7 +261,6 @@ public class Woolard_Hangman {
 
     public static boolean checkLetters(String guessing,String playerWord){
         return playerWord.contains(guessing);
-
         }
 
     public static void main(String[] args) {
@@ -279,6 +283,7 @@ public class Woolard_Hangman {
         int cw;
         int attempt = 0;
         int a = 0;
+        int q = 0;
         String[] Noob;
         String[] Average;
         String[] Legendary;
@@ -366,6 +371,8 @@ public class Woolard_Hangman {
                     if(attempt > 1){
                         System.out.println("Guess again.");
                     }
+                    System.out.println(drawLines(playerWord));
+                    System.out.println(showHangman(playerWord,a,q));
                     usersResponse = usersInput.nextLine().toLowerCase();
                     if(checkLetters(usersResponse,playerWord)){
                         System.out.println("Testing method to return boolean for plugging in the correct guess");
@@ -400,8 +407,19 @@ public class Woolard_Hangman {
                 }
                 System.out.println("Ok " + Player1 + ", since you're playing " + Difficulty + ", there will be a total of " + l +
                         " to guess.");
-                System.out.println(drawLines(playerWord));
-                usersResponse = usersInput.nextLine().toLowerCase();
+                boolean playerVsComputer=true;
+                while(playerVsComputer) {
+                    a++;
+                    if(a > 1){
+                        System.out.println("Guess again.");
+                    }
+                    System.out.println(playerWord);
+                    System.out.println(drawLines(playerWord));
+                    usersResponse = usersInput.nextLine().toLowerCase();
+                    if(checkLetters(usersResponse,playerWord)){
+                        System.out.println("Test for computer code.");
+                    }
+                }
             }
             //Invalid Response
             else {
