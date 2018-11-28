@@ -264,29 +264,33 @@ public class Woolard_Hangman {
         }
             return true;
     }
+
     public static String drawLines(String playerWord) {
         String Display = "";
         for(int i = 0; i < playerWord.length(); i++) {
             Display += "-";
-            if(playerWord.contains(" ")){
-                Display += " ";
-            }
         }
         return Display;
     }
 
+    /*public static String replaceLines(String playerWord, String linedWord){
+
+
+    }*/
+
 
     public static boolean checkLetters(String guessing,String playerWord){
         return playerWord.contains(guessing);
-        }
+    }
 
-    public static String addAndRemoveSpaces(String playerWord){
-        String addSpaces = " ";
-        int e = 17 - playerWord.length();
-        for(int i = 0; i < e; i++){
-            addSpaces += " ";
+    public static String usersLetter(String usersResponse, String hik, String newLetter, int a){
+        if(a == 2){
+            newLetter = hik + " " + usersResponse;
         }
-        return addSpaces;
+        else if(a > 2){
+            newLetter = newLetter + " " + hik;
+        }
+        return hik + " " + usersResponse;
     }
 
     public static void main(String[] args) {
@@ -296,19 +300,20 @@ public class Woolard_Hangman {
         String Player1;
         String Player2 = "Placeholder Name";
         String playerWord;
-        String guessWord;
-        String secretWord = "";
         String Difficulty = "";
         String l = "";
+        String linedWord = "";
+        String hik = "";
+        String newLetter = "";
         int usersResponseNumber;
         int Generator;
+        int a = 0;
         int i = 0;
         int g = 0;
         int p1w = 0;
         int p2w = 0;
         int cw;
         int attempt = 0;
-        int a = 0;
         int q = 0;
         String[] Noob;
         String[] Average;
@@ -387,24 +392,23 @@ public class Woolard_Hangman {
                 usersResponse = usersInput.nextLine().toLowerCase();
                 playerWord = usersResponse;
                 System.out.println("Ok! tell " + Player1 + " the game is ready.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-                System.out.println(drawLines(playerWord));
                 System.out.println("Ok " + Player1 + ", you can go ahead and guess the word.");
                 boolean playerVsPlayer=true;
                 while(playerVsPlayer) {
-                    attempt = a;
-                    attempt++;
-                    a = attempt;
-                    if(attempt > 1){
-                        System.out.println("Guess again.");
-                    }
+                    a++;
                     System.out.println(showHangman(playerWord,a,q));
                     usersResponse = usersInput.nextLine().toLowerCase();
-                    String newPlayerWord = drawLines(playerWord);
+                    hik = usersResponse;
+                    linedWord = drawLines(playerWord);
                     if(checkLetters(usersResponse,playerWord)){
-                        for(playerWord.contains(usersResponse); ){
-                            usersResponse
-                        }
                         System.out.println("Testing method to return boolean for plugging in the correct guess");
+                    }
+                    else{
+
+                        System.out.println("You've guessed incorrectly... guess again!");
+                    }
+                    if(a > 1){
+                        System.out.println(usersLetter(usersResponse,hik,newLetter,a));
                     }
                 }
             }
